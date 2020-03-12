@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Graydon Scates</title>
+
+    <!-- NES minified CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header>
+        <a class="nes-btn" href="index.html">Reset</a>
+    </header>
+    <div class="about">
+        <div class="nes-container is-dark is-rounded imageContainer">
+            <img src="avatar.jpg" alt="Graydon standing in front of a street in Venice, Italy" />
+        </div>
+        <div class="nes-container with-title is-dark is-rounded blurbContainer">
+            <p class="title">About Me</p>
+            <p class="blurbBox">
+                As you may have guessed by now, my name is Graydon Scates and I am both a programmer and a retro gaming fan. I started my coding journey with RPG Maker 2000 and simple HTML pages during middle school and never looked back. After moving from Atlanta to Orlando I attended Full Sail University and graduated Salutatorian with a Bachelor's degree in Digital Art and Design, which was a fun degree to be in as one of the only programming focused people surrounded by more creative artistic types. However, the creative skills I picked up from my classmates ultimately helped to get me where I am today, as did my ability to self-teach any programming language I come across.<br>
+                <br>
+                For the last 10+ years I have been working for <a href="https://www.linkedin.com/company/the-walt-disney-company/" target="_blank">The Walt Disney Company</a> in their in-house Marketing Creative Agency, Yellow Shoes. I started out working on a range of marketing projects like emails and web banners before graduating to micro-sites and games built in Flash (RIP) and Javascript. Eventually, as I continued to grow my knowledge and skills, my duties shifted to more Software Engineering and System Administration tasks out of necessity as I was one of the few people on our small team capable of tackling these more complicated programming needs. Through all of that I developed a deep love of solving complicated application building challenges and creating software solutions used company-wide to help make the lives and jobs of my fellow Disney Cast Members easier.<br>
+                <br>
+                My newest adventure, aside from a constant string of personal video game projects, is teaching the MERN full stack (Mongo, Express, React &amp; Node) as an instructor for the <a href="https://bootcamp.ce.ucf.edu/coding/" target="_blank">University of Central Florida Continuing Education Coding Bootcamp</a>. I have taught over a hundred people to be full stack application developers so far and it has been one of the most fun and rewarding challenges I have ever taken on. At this point I don't ever see myself not teaching in some form, as long as my day job continues to afford me the time to do so.<br>
+                <br>
+                If you ever want to talk about coding, games or even D&amp;D, just check out my <a href="contact.html">contact page</a>!
+            </p>
+        </div>
+        <div class="nes-container with-title is-dark is-rounded skillContainer">
+            <p class="title">Skills</p>
+            <div class="skillBox">
+                <div class="nes-badge"><span class="is-warning">HTML</span></div>
+                <div class="nes-badge"><span class="is-warning">CSS</span></div>
+                <div class="nes-badge"><span class="is-warning">JS</span></div>
+                <div class="nes-badge"><span class="is-warning">C#</span></div>
+                <div class="nes-badge"><span class="is-warning">PHP</span></div>
+                <div class="nes-badge"><span class="is-warning">MYSQL</span></div>
+                <div class="nes-badge"><span class="is-warning">REACT</span></div>
+                <div class="nes-badge"><span class="is-warning">NODE</span></div>
+                <div class="nes-badge"><span class="is-warning">EXPRESS</span></div>
+                <div class="nes-badge"><span class="is-warning">MONGO</span></div>
+                <div class="nes-badge"><span class="is-warning">PYTHON</span></div>
+                <div class="nes-badge"><span class="is-warning">BASH</span></div>
+                <div class="nes-badge"><span class="is-warning">AGILE</span></div>
+                <div class="nes-badge"><span class="is-warning">CI/CD</span></div>
+                <div class="nes-badge"><span class="is-warning">GIT</span></div>
+                <div class="nes-badge"><span class="is-warning">DOCKER</span></div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        © <span class="yearDisplay"></span> Richard Graydon Scates<br>
+        Built using the <a href="https://nostalgic-css.github.io/NES.css/" target="_blank">NES.css</a> library
+    </footer>
+
+    <script type="text/JavaScript">
+        const init = () => {
+            const date = new Date();
+            document.querySelector(".yearDisplay").innerText = date.getYear() + 1900;
+        };
+        
+        window.addEventListener("load", init);
+    </script>
+</body>
+</html>

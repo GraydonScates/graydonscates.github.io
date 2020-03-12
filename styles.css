@@ -1,0 +1,395 @@
+/* RESETS */
+a {
+    text-decoration: none;
+}
+a:hover {
+    color: default;
+    text-decoration: none;
+}
+.nes-radio:checked+span::before {
+    animation: blink 1s infinite steps(1);
+}
+.nes-container.is-dark::after, .nes-container.is-dark.with-title>.title, .nes-balloon.is-dark.from-left::before, .nes-balloon.is-dark.from-left::after, .nes-balloon.is-dark, .is-dark {
+    background-color: rgb(5, 0, 29) !important;
+}
+.nes-balloon.is-dark.from-left::before, .nes-balloon.is-dark, .is-dark {
+    box-shadow: none !important;
+}
+/* /RESETS */
+
+/* BODY */
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("grid.png");
+    background-size: 40%;
+    background-color: rgb(5, 0, 29);
+    font-size: 14px;
+    line-height: 18px;
+    color: rgb(255, 255, 255);
+}
+/* /BODY */
+
+/* HOME */
+.home {
+    width: 80vw;
+    height: 95vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.home .title {
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+}
+.home .title .name, .home .title .shine {
+    position: absolute;
+    font-size: 35px;
+    line-height: 35px;
+    font-style: italic;
+    text-transform: uppercase;
+    color: rgb(212, 163, 0);
+}
+.home .title .shine {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: -150px;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+.home .title .shine.on {
+    background-position: 250px;
+}
+.home .title .first {
+    top: 0px;
+    left: -315px;
+    transition: left 200ms linear, background-position 200ms linear 400ms;
+}
+.home .title .first.on {
+    left: 0px;
+}
+.home .title .last {
+    top: 40px;
+    left: -220px;
+    transition: left 200ms linear 100ms, background-position 200ms linear 500ms;
+}
+.home .title .last.on {
+    left: 100px;
+}
+.home .mainMenu {
+    padding-right: 15px;
+    font-size: 16px;
+    text-align: left;
+}
+.home label {
+    display: block;
+    margin-bottom: 10px;
+}
+/* /HOME */
+
+/* ABOUT */
+header {
+    width: 100vw;
+    height: 9vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    background: rgba(5, 0, 29, 0.9);
+    text-align: center;
+    z-index: 101;
+}
+.about {
+    width: 80vw;
+    margin: 12vh auto 10vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.imageContainer {
+    padding: 4px !important;
+}
+.imageContainer img {
+    width: 100%;
+    image-rendering: pixelated;
+}
+.nes-container {
+    width: 100%;
+    margin-bottom: 5vh !important;
+}
+.nes-container:last-child {
+    margin-bottom: 0vh !important;
+}
+.blurbBox {
+    padding-bottom: 10px;
+    font-size: 11px;
+}
+.skillBox {
+    padding-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.nes-badge {
+    width: 45%;
+    margin: 0 0 25px;
+    font-size: 10px;
+    color: rgb(5, 0, 29);
+}
+.nes-badge:nth-child(odd){
+    margin-right: 25px;
+}
+/* /ABOUT */
+
+/* CONTACT */
+.contact {
+    width: 80vw;
+    margin: 20vh auto 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-size: 12px;
+}
+.message {
+    margin-bottom: 6vh;
+}
+.nes-balloon {
+    max-width: 71%;
+}
+.linkBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+/* /CONTACT */
+
+/* FOOTER */
+footer {
+    width: 100vw;
+    height: 7.2vh;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    background: rgba(5, 0, 29, 0.9);
+    text-align: center;
+    z-index: 101;
+    font-size: 10px;
+    color: rgb(131, 131, 131);
+}
+/* /FOOTER */
+
+/* MISC */
+.textCenter {
+    text-align: center;
+}
+.flexCenter {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+/* /MISC */
+
+/* TABLET */
+@media only screen and (min-width: 768px) {
+    /* BODY */
+    body {
+        background-size: 20%;
+    }
+    /* /BODY */
+
+    /* HOME */
+    .home .title {
+        height: 180px;
+    }
+    .home .title .name, .home .title .shine {
+        font-size: 55px;
+        line-height: 55px;
+    }
+    .home .title .shine {
+        background-size: 50%;
+        background-position: -300px;
+    }
+    .home .title .shine.on {
+        background-position: 450px;
+    }
+    .home .title .first {
+        left: -140%;
+    }
+    .home .title .first.on {
+        left: 10%;
+    }
+    .home .title .last {
+        top: 70px;
+        left: -100%;
+    }
+    .home .title .last.on {
+        left: 40%;
+    }
+    .home .mainMenu {
+        font-size: 20px;
+    }
+    .home label {
+        margin-bottom: 18px;
+    }
+    /* /HOME */
+
+    /* ABOUT */
+    header {
+        height: 6.5vh;
+    }
+    .about {
+        margin: 9.5vh auto 8vh;
+    }
+    .imageContainer {
+        width: 30%;
+        margin-right: 70% !important;
+    }
+    .skillBox {
+        padding-top: 20px;
+    }
+    .nes-badge {
+        width: 22%;
+        margin: 0 20px 20px 0px;
+    }
+    .nes-badge:nth-child(odd) {
+        margin-right: 20px;
+    }
+    .nes-badge:nth-child(4n){
+        margin-right: 0px;
+    }
+    /* /ABOUT */
+
+    /* CONTACT */
+    .contact {
+        width: 60vw;
+        margin: 25vh auto 0;
+    }
+    .nes-balloon {
+        max-width: 78%;
+    }
+    /* /CONTACT */
+
+    /* FOOTER */
+    footer {
+        height: 5.2vh;
+    }
+    /* /FOOTER */
+}
+/* /TABLET */
+
+/* DESKTOP */
+@media only screen and (min-width: 1024px) {
+    /* BODY */
+    body {
+        background-size: 5%;
+    }
+    /* /BODY */
+
+    /* HOME */
+    .home {
+        width: 30vw;
+    }
+    .home .title {
+        height: 200px;
+    }
+    .home .title .name, .home .title .shine {
+        font-size: 65px;
+        line-height: 65px;
+    }
+    .home .title .shine {
+        background-size: 50%;
+        background-position: -300px;
+    }
+    .home .title .shine.on {
+        background-position: 450px;
+    }
+    .home .title .first {
+        left: -140%;
+    }
+    .home .title .first.on {
+        left: 10%;
+    }
+    .home .title .last {
+        top: 70px;
+        left: -100%;
+    }
+    .home .title .last.on {
+        left: 40%;
+    }
+    .home .mainMenu {
+        font-size: 24px;
+    }
+    .home label {
+        margin-bottom: 20px;
+    }
+    /* /HOME */
+
+    /* ABOUT */
+    header {
+        height: 5vh;
+    }
+    .about {
+        width: 50vw;
+        margin: 15vh auto 0;
+        justify-content: flex-end;
+    }
+    .imageContainer {
+        width: 15%;
+        margin-right: 3vh !important;
+    }
+    .blurbContainer, .skillContainer {
+        width: 81%;
+    }
+    .nes-container {
+        margin-bottom: 3vh !important;
+        display: inline-block !important;
+    }
+    .skillBox {
+        padding-top: 20px;
+    }
+    .nes-badge {
+        width: 9.2%;
+        margin: 0 20px 20px 0px;
+    }
+    .nes-badge:nth-child(odd) {
+        margin-right: 20px;
+    }
+    .nes-badge:nth-child(4n){
+        margin-right: 20px;
+    }
+    .nes-badge:nth-child(9n){
+        margin-right: 0px;
+    }
+    /* /ABOUT */
+
+    /* CONTACT */
+    .contact {
+        width: 30vw;
+        margin: 25vh auto 0;
+    }
+    .nes-balloon {
+        max-width: 87%;
+    }
+    /* /CONTACT */
+
+    /* FOOTER */
+    footer {
+        height: 4.2vh;
+    }
+    /* /FOOTER */
+}
+/* /DESKTOP */
