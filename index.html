@@ -4,14 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Graydon's Portfolio</title>
+    <title>Graydon Scates</title>
+
+    <!-- NES minified CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <div>
-        This is an awesome Portfolio and not at all empty...
+    <div class="home">
+        <div class="title">
+            <div class="name first">Graydon</div>
+            <div class="shine first">Graydon</div>
+            <div class="name last">Scates</div>
+            <div class="shine last">Scates</div>
+        </div>
+        <div class="mainMenu">
+            <label>
+                <input class="nes-radio is-dark link" type="radio" name="menu" data-page="about.html" checked />
+                <span>About</span>
+            </label>
+            <!-- <label>
+                <input class="nes-radio is-dark link" type="radio" name="menu" data-page="portfolio.html" />
+                <span>Portfolio</span>
+            </label> -->
+            <label>
+                <input class="nes-radio is-dark link" type="radio" name="menu" data-page="contact.html" />
+                <span>Contact</span>
+            </label>
+        </div>
     </div>
-    <div>
-        Still empty but less so..
-    </div>
+    <footer>
+        © <span class="yearDisplay"></span> Richard Graydon Scates<br>
+        Built using the <a href="https://nostalgic-css.github.io/NES.css/" target="_blank">NES.css</a> library
+    </footer>
+
+    <script type="text/JavaScript">
+        const init = () => {
+            const date = new Date();
+            document.querySelector(".yearDisplay").innerText = date.getYear() + 1900;
+
+            setTimeout(() => {
+                document.querySelectorAll(".title .first").forEach(elem => elem.setAttribute("class", elem.getAttribute("class") + " on"));
+                document.querySelectorAll(".title .last").forEach(elem => elem.setAttribute("class", elem.getAttribute("class") + " on"));
+                document.querySelectorAll(".title .shine").forEach(elem => elem.setAttribute("class", elem.getAttribute("class") + " on"));
+            }, 300);
+
+            document.querySelectorAll(".link").forEach(link => link.addEventListener("click", e => window.location = e.target.getAttribute("data-page")));
+        };
+        
+        window.addEventListener("load", init);
+    </script>
 </body>
 </html>
