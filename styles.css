@@ -33,7 +33,7 @@ body {
 /* HOME */
 .home {
     width: 80vw;
-    height: 92.5vh;
+    height: 92vh;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -107,7 +107,7 @@ header {
 }
 .about {
     width: 80vw;
-    margin: 12vh auto 10vh;
+    margin: 12vh auto 11vh;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -152,7 +152,7 @@ header {
 /* CONTACT */
 .contact {
     width: 80vw;
-    margin: 20vh auto 10vh;
+    margin: 12vh auto 11vh;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -177,7 +177,7 @@ header {
 /* FOOTER */
 footer {
     width: 100vw;
-    height: 7.5vh;
+    height: 8vh;
     position: fixed;
     bottom: 0;
     left: 0;
