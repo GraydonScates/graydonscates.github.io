@@ -33,7 +33,7 @@ body {
 /* HOME */
 .home {
     width: 80vw;
-    height: 95vh;
+    height: 92.5vh;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -152,7 +152,7 @@ header {
 /* CONTACT */
 .contact {
     width: 80vw;
-    margin: 20vh auto 0;
+    margin: 20vh auto 10vh;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -177,7 +177,7 @@ header {
 /* FOOTER */
 footer {
     width: 100vw;
-    height: 7.2vh;
+    height: 7.5vh;
     position: fixed;
     bottom: 0;
     left: 0;
